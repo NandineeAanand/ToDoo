@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  
+  padding: 2rem;
+  background-color: #1f86cf;
+ 
+  background-image: url("https://www.transparenttextures.com/patterns/crisp-paper-ruffles.png"); 
+
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+
+background-color: #1f86cf;
+background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+ 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.title {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 900;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #333333;
+  padding: 2rem;
+  /* Deep Charcoal */
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Calming Blue */
+  border: 2px solid #333333;
+  /* Soft Grey */
+  border-radius: 4px;
+  font-size: 1.5rem;
+  color: #333333;
+  /* Deep Charcoal */
+  transition: background-color 0.3s;
+}
+
+.todo p {
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+.todo:hover {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  transition: all 0.01s;
+  transform: scale(1.05);
+}
+
+.mutations {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Adds space between status and button */
+}
+.todo__status,
+.todoo__delete {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  margin:0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+
+.todo__status:hover,
+.todoo__delete:hover {
+  transform: scale(1.1);
+}
+
+.todo.completed {
+  background-color: #D3EBCD;
+  /* Pale Green */
+  text-decoration: line-through;
+  color: #333333;
+  /* Keep text readable */
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem auto;
+}
+
+.form__input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #E0E0E0;
+  /* Soft Grey */
+  border-radius: 4px;
+  background-color: #ffffffe0;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.form__input:focus, .form__input:hover {
+  outline: 2px solid #134f7a;
+  transform: scale(1.02);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.01);
+  font-size: 1rem;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  gap:1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1.08);
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-style: noraml;
+}
+@media(max-width:400px)
+{
+  .title{
+    font-size: 2.5rem;
+  }
+  .form{
+    width:95%;
+  }
+  .todo{ 
+    width:95%;
+    font-size: 1.2rem;;
+  }
+}
